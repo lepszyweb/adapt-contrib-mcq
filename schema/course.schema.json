@@ -18,8 +18,8 @@
               "properties": {
                 "ariaRegion": {
                   "type": "string",
-                  "title": "ARIA region",
-                  "default": "Multiple choice question",
+                  "title": "Region ARIA",
+                  "default": "Pytanie wielokrotnego wyboru",
                   "_adapt": {
                     "translatable": true
                   }
