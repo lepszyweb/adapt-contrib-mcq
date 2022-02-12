@@ -51,7 +51,7 @@
               },
               "_shouldBeSelected": {
                 "type": "boolean",
-                "title": "Zaznacz tę opcję jako prawidłową",
+                "title": "Zaznacz tę opcję jako poprawną",
                 "default": false
               },
               "_isPartlyCorrect": {
@@ -62,7 +62,7 @@
               "feedback": {
                 "type": "string",
                 "title": "Informacje zwrotne dla poszczególnych odpowiedzi",
-                "description": "Gdy 'Elementy do wyboru' jest ustawione na 1, może to być użyte do przekazania użytkownikowi informacji zwrotnej dotyczącej wybranej przez niego odpowiedzi - jeśli jest ona nieprawidłowa.",
+                "description": "Gdy 'Elementy do wyboru' jest ustawione na 1, może to być użyte do przekazania użytkownikowi informacji zwrotnej dotyczącej wybranej przez niego odpowiedzi - jeśli jest ona niepoprawna.",
                 "default": "",
                 "_adapt": {
                   "translatable": true
@@ -97,7 +97,7 @@
         },
         "_canShowMarking": {
           "type": "boolean",
-          "title": "Włącz znakowanie",
+          "title": "Włącz zaznaczanie",
           "default": true
         },
         "_shouldDisplayAttempts": {
@@ -141,7 +141,7 @@
           "properties": {
             "title": {
               "type": "string",
-              "title": "Title",
+              "title": "Tytuł",
               "description": "Pozostaw puste, aby zamiast tytułu wyświetlany był tytuł komponentu",
               "default": "",
               "_adapt": {
@@ -344,7 +344,7 @@
             },
             "remainingAttemptText": {
               "type": "string",
-              "title": "Etykieta próby końcowej",
+              "title": "Etykieta ostatniej próby",
               "default": "",
               "_adapt": {
                 "translatable": true

@@ -7,7 +7,7 @@
     "ariaRegion": {
       "type": "string",
       "required": true,
-      "default": "Multiple choice question",
+      "default": "Pytanie wielokrotnego wyboru",
       "inputType": "Text",
       "validators": [],
       "translatable": true
@@ -15,19 +15,19 @@
     "ariaCorrectAnswer": {
       "type": "string",
       "required": true,
-      "default": "The correct answer is {{{correctAnswer}}}",
+      "default": "Poprawna odpowiedź to {{{correctAnswer}}}",
       "inputType": "Text",
       "validators": [],
-      "help": "Text that will be announced by the screen reader when the learner selects the 'correct answer' button (and there is only one correct answer)",
+      "help": "Text that will be announced by the screen reader when the learner selects the 'Poprawna odpowiedź' button (and there is only one Poprawna odpowiedź)",
       "translatable": true
     },
     "ariaCorrectAnswers": {
       "type": "string",
       "required": true,
-      "default": "The correct answers are {{{correctAnswer}}}",
+      "default": "Poprawna odpowiedź to  {{{correctAnswer}}}",
       "inputType": "Text",
       "validators": [],
-      "help": "Text that will be announced by the screen reader when the learner selects the 'correct answer' button (and there is more than one correct answer)",
+      "help": "Text that will be announced by the screen reader when the learner selects the 'Poprawna odpowiedź' button (and there is more than one Poprawna odpowiedź)",
       "translatable": true
     },
     "ariaUserAnswer": {
@@ -36,7 +36,7 @@
       "default": "The answer you chose was {{{userAnswer}}}",
       "inputType": "Text",
       "validators": [],
-      "help": "Text that will be announced by the screen reader when the learner selects the 'hide correct answer' button (and the learner only chose one answer)",
+      "help": "Text that will be announced by the screen reader when the learner selects the 'Ukryj poprawną odpowiedź' button (and the learner only chose one answer)",
       "translatable": true
     },
     "ariaUserAnswers": {
@@ -45,7 +45,7 @@
       "default": "The answers you chose were {{{userAnswer}}}",
       "inputType": "Text",
       "validators": [],
-      "help": "Text that will be announced by the screen reader when the learner selects the 'hide correct answer' button (and the learner chose more than one answer)",
+      "help": "Text that will be announced by the screen reader when the learner selects the 'Ukryj poprawną odpowiedź' button (and the learner chose more than one answer)",
       "translatable": true
     }
   },
@@ -70,7 +70,7 @@
       "type": "array",
       "required": true,
       "title": "Answers",
-      "help": "The possible answers available to the learner",
+      "help": "Możliwe odpowiedzi dostępne dla uczącego się",
       "items": {
         "type": "object",
         "required": true,
@@ -82,14 +82,14 @@
             "title": "Answer Text",
             "inputType": "Text",
             "validators": ["required"],
-            "help": "This text will display as the answer text",
+            "help": "Ten tekst zostanie wyświetlony jako tekst odpowiedzi",
             "translatable": true
           },
           "_shouldBeSelected": {
             "type": "boolean",
             "required": true,
             "default": false,
-            "title": "Correct answer?",
+            "title": "Poprawna odpowiedź?",
             "inputType": "Checkbox",
             "validators": []
           },
@@ -97,7 +97,7 @@
             "type": "boolean",
             "required": true,
             "default": false,
-            "title": "Is only partly correct?",
+            "title": "Is only Częściowo poprawne?",
             "inputType": "Checkbox",
             "validators": []
           },
@@ -105,10 +105,10 @@
             "type": "string",
             "required": false,
             "default": "",
-            "title": "Answer-specific feedback",
+            "title": "Informacje zwrotne dla poszczególnych odpowiedzi",
             "inputType": "TextArea",
             "validators": [],
-            "help": "When 'Selectable Items' is set to 1, this can be used to give the user feedback specific to the answer they selected - if incorrect.",
+            "help": "Gdy 'Elementy do wyboru' jest ustawione na 1, może to być użyte do przekazania użytkownikowi informacji zwrotnej dotyczącej wybranej przez niego odpowiedzi - jeśli jest ona nieprawidłowa..",
             "translatable": true
           },
           "_score": {
@@ -118,7 +118,7 @@
             "title": "Score",
             "inputType": "Number",
             "validators": ["required", "number"],
-            "help": "If item scoring is enabled, selected item scores are summed to give the question score."
+            "help": "Jeśli włączona jest ocena punktowa, wyniki wybranych pozycji są sumowane, aby uzyskać wynik pytania.."
           }
         }
       }
@@ -130,7 +130,7 @@
       "title": "Attempts",
       "inputType": "Number",
       "validators": ["required", "number"],
-      "help": "How many attempts the learner is allowed"
+      "help": "Ile prób może wykonać uczeń"
     },
     "_canShowModelAnswer": {
       "type": "boolean",
@@ -139,7 +139,7 @@
       "title": "Display Model Answer",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "Allow the user to view the 'model answer' if they answer the question incorrectly?"
+      "help": "Umożliwienie użytkownikowi obejrzenia 'modelowej odpowiedzi', jeśli odpowie na pytanie niepoprawnie?"
     },
     "_canShowFeedback": {
       "type": "boolean",
@@ -169,7 +169,7 @@
       "type": "boolean",
       "required": false,
       "default": false,
-      "title": "Randomise answers",
+      "title": "Losuj odpowiedzi",
       "inputType": "Checkbox",
       "validators": []
     },
@@ -177,37 +177,37 @@
       "type": "boolean",
       "required": false,
       "default": true,
-      "title": "Record interaction",
+      "title": "Zapisywanie interakcji",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "If disabled, recording the user's answer(s) to this question to cmi.interactions on the LMS will be disabled for this component only."
+      "help": "Jeśli wyłączone, nagrywanie odpowiedzi użytkownika na to pytanie do cmi.interactions w LMS będzie wyłączone tylko dla tego komponentu."
     },
     "_hasItemScoring": {
       "type": "boolean",
       "required": false,
       "default": false,
-      "title": "Enable item scoring",
+      "title": "Włącz ocenę punktową elementów",
       "inputType": "Checkbox",
       "validators": [],
-      "help": "When disabled, this question scores 0 for incorrect and 'Question Weight' for correct. When enabled, this question scores by summing the scores of the selected options."
+      "help": "Gdy wyłączone, pytanie to otrzymuje 0 punktów za odpowiedź nieprawidłową i 'Waga pytań' za odpowiedź prawidłową. Gdy włączone, pytanie to jest punktowane poprzez zsumowanie punktów z wybranych opcji."
     },
     "_questionWeight": {
       "type": "number",
       "required": false,
       "default": 1,
-      "title": "Question Weight",
+      "title": "Waga pytania",
       "inputType": "Number",
       "validators": ["number"],
-      "help": "When item scoring is disabled, this is the question score for a correct response."
+      "help": "Gdy punktacja elementu jest wyłączona, jest to wynik pytania dla poprawnej odpowiedzi.."
     },
     "_selectable": {
       "type": "number",
       "required": true,
       "default": 1,
-      "title": "Selectable Items",
+      "title": "Elementy do wyboru",
       "inputType": "Number",
       "validators": ["number", "required"],
-      "help": "How many items are selectable"
+      "help": "Ile elementów jest możliwych do wybrania"
     },
     "_feedback": {
       "type": "object",
@@ -221,7 +221,7 @@
           "title": "Feedback Title",
           "inputType": "Text",
           "validators": [],
-          "help": "Leave blank to have the component's title shown instead.",
+          "help": "Pozostaw puste, aby zamiast tytułu wyświetlany był tytuł komponentu.",
           "translatable": true
         },
         "correct": {
@@ -231,7 +231,7 @@
           "title": "Correct",
           "inputType": "TextArea",
           "validators": [],
-          "help": "Correct answer feedback for this question",
+          "help": "Informacje zwrotne dotyczące prawidłowych odpowiedzi dla tego pytania",
           "translatable": true
         },
         "_incorrect": {
@@ -246,7 +246,7 @@
               "title": "Incorrect Final",
               "inputType": "TextArea",
               "validators": [],
-              "help": "Incorrect answer feedback for the final attempt",
+              "help": "Informacje zwrotne dotyczące błędnych odpowiedzi przy próbie końcowej",
               "translatable": true
             },
             "notFinal": {
@@ -256,7 +256,7 @@
               "title": "Incorrect Not Final",
               "inputType": "TextArea",
               "validators": [],
-              "help": "Incorrect answer feedback for any attempt apart from the last attempt. If you leave this blank, the 'Incorrect Final' feedback will be used instead.",
+              "help": "InPoprawna odpowiedź feedback for any attempt apart from the last attempt. If you leave this blank, the 'Incorrect Final' feedback will be used instead.",
               "translatable": true
             }
           }
@@ -269,20 +269,20 @@
               "type": "string",
               "required": false,
               "default": "",
-              "title": "Partly Correct Final",
+              "title": "Częściowo poprawne Final",
               "inputType": "TextArea",
               "validators": [],
-              "help": "Partly correct answer feedback for the final attempt. If you leave this blank, the 'Incorrect Final' feedback will be used instead.",
+              "help": "Częściowo poprawne answer feedback for the final attempt. If you leave this blank, the 'Incorrect Final' feedback will be used instead.",
               "translatable": true
             },
             "notFinal": {
               "type": "string",
               "required": false,
               "default": "",
-              "title": "Partly Correct Not Final",
+              "title": "Częściowo poprawne Not Final",
               "inputType": "TextArea",
               "validators": [],
-              "help": "Partly correct answer feedback for any attempt apart from the last attempt. If you leave this blank, the 'Partly Correct Final' feedback will be used instead.",
+              "help": "Częściowo poprawne answer feedback for any attempt apart from the last attempt. If you leave this blank, the 'Częściowo poprawne Final' feedback will be used instead.",
               "translatable": true
             }
           }
@@ -348,7 +348,7 @@
         },
         "_showCorrectAnswer": {
           "type": "object",
-          "title": "Show Correct Answer",
+          "title": "Pokaż poprawną odpowiedź",
           "properties": {
             "buttonText": {
               "type": "string",
@@ -374,7 +374,7 @@
         },
         "_hideCorrectAnswer": {
           "type": "object",
-          "title": "Hide Correct Answer",
+          "title": "Ukryj poprawną odpowiedź",
           "properties": {
             "buttonText": {
               "type": "string",
@@ -400,7 +400,7 @@
         },
         "_showFeedback": {
           "type": "object",
-          "title": "Show Feedback",
+          "title": "Pokaż informację zwrotną",
           "properties": {
             "buttonText": {
               "type": "string",
